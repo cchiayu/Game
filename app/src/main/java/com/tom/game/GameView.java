@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 public class GameView extends View {
 
     private Object Paint;
-
+    private float posX,posY = 400;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
@@ -24,6 +24,27 @@ public class GameView extends View {
         Paint  paint= new Paint();//畫筆
         canvas.drawLine(400,0,0,600,paint);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.wolf);
-        canvas.drawBitmap(bitmap,500,300,paint);
+        canvas.drawBitmap(bitmap,posX,posY,paint);
     }
+
+    public void setPosX(float posX) {
+        if(posX>0 && posX< getWidth()-120){
+            this.posX = posX;
+        }
+    }
+
+    public void setPosY(float posY) {
+        if(posY>0 && posY< getHeight()-120){
+        this.posY = posY;
+        }
+    }
+
+    public float getPosX() {
+        return posX;
+    }
+
+    public float getPosY() {
+        return posY;
+    }
+
 }

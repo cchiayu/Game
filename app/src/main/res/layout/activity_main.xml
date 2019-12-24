@@ -52,7 +52,7 @@
         app:srcCompat="@drawable/up" />
 
     <view
-        android:id="@+id/view"
+        android:id="@+id/Game"
         class="com.tom.game.GameView"
         android:layout_width="0dp"
         android:layout_height="0dp"
