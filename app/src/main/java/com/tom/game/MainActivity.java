@@ -40,15 +40,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 break;
             case R.id.arrow_down:
                 Log.d("MainActivity","onClick:DOWN");
-                gameView.setPosY(gameView.getPosY()+120);
+                //gameView.moveDown();    上下兩種皆可
+               gameView.setPosY(gameView.getPosY()+120);
                gameView.invalidate();
                 break;
-            case R.id.arrow_right:
+            case R.id.arrow_right:                              //精簡版
                 Log.d("MainActivity","onClick:RIGHT");
                 gameView.setPosX(gameView.getPosX()+120);
                 gameView.invalidate();
                 break;
-            case R.id.arrow_left:
+            case R.id.arrow_left:                               //精簡版
                 Log.d("MainActivity","onClick:LEFT");
                 gameView.setPosX(gameView.getPosX()-120);
                 gameView.invalidate();
